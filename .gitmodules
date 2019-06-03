@@ -1,0 +1,3 @@
+[submodule "scratchspace"]
+	path = scratchspace
+	url = https://github.com/kuroi-okami/scratchspace
