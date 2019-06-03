@@ -9,6 +9,5 @@ enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include
 		    ${gmock_SOURCE_DIR}/include)
 
-add_subdirectory(googletest)
-add_subdirectory(scratchspace)
+add_subdirectory(third_party)
 
