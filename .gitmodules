@@ -1,3 +1,7 @@
 [submodule "scratchspace"]
 	path = scratchspace
 	url = https://github.com/kuroi-okami/scratchspace
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest/
+
