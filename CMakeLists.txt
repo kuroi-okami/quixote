@@ -6,8 +6,11 @@ set(CMAKE_CXX_STANDARD 11)
 project(quixote)
 enable_testing()
 
-include_directories(${gtest_SOURCE_DIR}/include
-		    ${gmock_SOURCE_DIR}/include)
-
+# Configure third party dependancies
 add_subdirectory(third_party)
+include_directories(${GTEST_INCLUDE_DIR}
+                    ${GMOCK_INCLUDE_DIR}
+                    ${BOOST_INCLUDE_DIR})
+
+
 
