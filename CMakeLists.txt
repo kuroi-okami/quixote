@@ -12,5 +12,4 @@ include_directories(${GTEST_INCLUDE_DIR}
                     ${GMOCK_INCLUDE_DIR}
                     ${BOOST_INCLUDE_DIR})
 
-
-
+add_subdirectory(src)
