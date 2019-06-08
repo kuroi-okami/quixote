@@ -1,0 +1,10 @@
+add_library(settings
+            settings_impl.cpp)
+
+target_link_libraries(settings
+               PUBLIC boost_filesystem  )
+
+add_executable(settings_bin
+               main.cpp)
+target_link_libraries(settings_bin
+                      settings)
