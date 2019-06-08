@@ -26,3 +26,5 @@ set(GMOCK_INCLUDE_DIR ${gmock_SOURCE_DIR}/include  PARENT_SCOPE)
 
 # Propagate the link libraries backwards
 set(BOOST_LINK_DIR ${BOOST_INSTALL_DIR}/libraries PARENT_SCOPE)
+set(GTEST_LINK_DIR ${CMAKE_BINARY_DIR}/googletest/googlemock/gtest)
+set(GMOCK_LINK_DIR ${CMAKE_BINARY_DIR}/googletest/googlemock)

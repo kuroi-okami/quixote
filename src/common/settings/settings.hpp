@@ -18,4 +18,4 @@ public:
 
 } // namespace settings
 } // namespace common
-#endif
+#endif //!QXT_SRC_COMMON_SETTINGS_SETTINGS_HPP_

@@ -1,4 +1,5 @@
-#include "settings_impl.hpp"
+#include "settings_impl_json.hpp"
+#include "settings_exception.hpp"
 
 #include <boost/fusion/iterator/prior.hpp>
 #include <boost/algorithm/string/join.hpp>
@@ -6,22 +7,23 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/tokenizer.hpp>
+#include <boost/filesystem.hpp>
 #include <iostream>
 
 common::settings::settings_impl::settings_impl() : settings_file_(default_settings_file)
 {
-    std::cout
-        << "Initalising settings with settings_file: "
-        << default_settings_file.c_str()
-        << std::endl;
+    if(!boost::filesystem::exists(settings_file_))
+    {
+        throw settings_exception("File does not exist");
+    }
 }
 
 common::settings::settings_impl::settings_impl(const boost::filesystem::path& settiings_file) : settings_file_(settiings_file)
 {
-    std::cout
-        << "Initalising settings with settings_file: "
-        << settiings_file.c_str()
-        << std::endl;
+    if(!boost::filesystem::exists(settings_file_))
+    {
+        throw settings_exception("File does not exist");
+    }
 }
 
 const boost::optional<boost::container::string> common::settings::settings_impl::get_settings(const boost::container::string& key) const

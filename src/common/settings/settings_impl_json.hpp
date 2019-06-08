@@ -1,5 +1,5 @@
-#ifndef QXT_SRC_COMMON_SETTINGS_SETTINGS_IMPL_HPP_
-#define QXT_SRC_COMMON_SETTINGS_SETTINGS_IMPL_HPP_
+#ifndef QXT_SRC_COMMON_SETTINGS_SETTINGS_IMPL_JSON_HPP_
+#define QXT_SRC_COMMON_SETTINGS_SETTINGS_IMPL_JSON_HPP_
 
 #include <boost/filesystem/path.hpp>
 #include <boost/container/string.hpp>
@@ -11,7 +11,7 @@ namespace common
 namespace settings
 {
 
-static boost::filesystem::path default_settings_file("/src/quixote/external/settings/settings.json");
+static const boost::filesystem::path default_settings_file("/src/quixote/external/settings/settings.json");
 
 class settings_impl : public settings
 {
@@ -28,4 +28,4 @@ private:
 } // namespace settings
 } // namespace common
 
-#endif // !QXT_SRC_COMMON_SETTINGS_SETTINGS_IMPL_HPP_
+#endif // !QXT_SRC_COMMON_SETTINGS_SETTINGS_IMPL_JSON_HPP_
