@@ -9,6 +9,11 @@
 
 #include <gtest/gtest.h>
 
+namespace common
+{
+namespace settings
+{
+
 class SettingsJsonFactory : public testing::Test
 {
 protected:
@@ -43,4 +48,7 @@ TEST_F(SettingsJsonFactory, SettingsFactoryOverloadedCreateShouldThrowWithInvali
     EXPECT_THROW(
         test_json_factory_->create(boost::filesystem::path("definitely/not/a/path.json")),
         common::settings::settings_exception);
+}
+
+}
 }

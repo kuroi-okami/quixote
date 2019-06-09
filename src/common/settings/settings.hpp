@@ -14,6 +14,7 @@ class settings
 {
 public:
     virtual const boost::optional<boost::container::string> get_settings(const boost::container::string& key) const = 0;
+    virtual const boost::optional<boost::container::string> get_settings_from_array(const boost::container::string& key, unsigned int array_index) const = 0;
 };
 
 } // namespace settings

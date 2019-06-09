@@ -20,6 +20,7 @@ public:
     settings_impl(const boost::filesystem::path& settings_file);
 
     const boost::optional<boost::container::string> get_settings(const boost::container::string& key) const;
+    const boost::optional<boost::container::string> get_settings_from_array(const boost::container::string& key, unsigned int array_index) const;
 
 private:
     const boost::filesystem::path settings_file_;
