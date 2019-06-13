@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.6.2)
 
-set(CMAKE_CXX_FLAGS "-O3 -Wall -Werror")
+set(CMAKE_CXX_FLAGS "-O3 -Wall -Werror -DBOOST_ALL_DYN_LINK -DBOOST_LOG_DYN_LINK")
 set(CMAKE_CXX_STANDARD 11)
 
 project(quixote)
