@@ -19,7 +19,6 @@ public:
 
 private:
     log_sink_impl();
-    void make_shared_enabler() const;
 
     boost::shared_ptr<boost::log::sources::logger> logger_;
     static boost::shared_ptr<log_sink_impl> log_instance_;

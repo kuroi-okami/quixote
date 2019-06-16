@@ -1,5 +1,6 @@
 add_library(log_sink
-            log_sink_impl.cpp)
+            log_sink_impl.cpp
+            log_sink_factory.cpp)
 
 target_link_libraries(log_sink
                       PUBLIC
@@ -17,4 +18,3 @@ target_link_libraries(beep_boop
                       log_sink
                       /src/quixote/third_party/boost-1.70/lib/libboost_filesystem.so.1.70.0
                       )
-

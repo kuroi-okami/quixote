@@ -20,7 +20,6 @@ namespace logger
 class log_sink
 {
 public:
-    //virtual boost::shared_ptr<common::logger::log_sink> get_instance() const = 0;
     virtual boost::shared_ptr<boost::log::sources::logger> get_logger() const = 0;
     virtual ~log_sink() {}
 };
