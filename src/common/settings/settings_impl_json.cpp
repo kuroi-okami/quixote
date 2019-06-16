@@ -43,7 +43,7 @@ const boost::optional<boost::container::string> common::settings::settings_impl:
     boost::container::vector<std::basic_string<char> > full_path_to_key;
     for (const auto& t : tokens)
     {
-        std::cout << t << std::endl;
+        //std::cout << t << std::endl;
         full_path_to_key.push_back(t);
     }
 

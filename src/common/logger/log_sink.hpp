@@ -12,6 +12,8 @@
 #include <boost/log/sources/logger.hpp>
 #include <boost/log/sources/record_ostream.hpp>
 
+#include "severity.hpp"
+
 namespace common
 {
 namespace logger
@@ -20,7 +22,8 @@ namespace logger
 class log_sink
 {
 public:
-    virtual boost::shared_ptr<boost::log::sources::logger> get_logger() const = 0;
+    virtual boost::shared_ptr<
+        boost::log::sources::severity_logger< log_severity >> get_logger() const = 0;
     virtual ~log_sink() {}
 };
 

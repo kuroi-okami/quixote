@@ -1,6 +1,7 @@
 add_library(log_sink
             log_sink_impl.cpp
-            log_sink_factory.cpp)
+            log_sink_factory.cpp
+            severity.cpp)
 
 target_link_libraries(log_sink
                       PUBLIC
@@ -9,6 +10,7 @@ target_link_libraries(log_sink
                       boost_log
                       boost_system
                       boost_filesystem
+                      settings
                       )
 
 add_executable(beep_boop
