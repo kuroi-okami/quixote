@@ -3,8 +3,8 @@ FROM ubuntu:latest
 
 # Install essentials for dev, and some extras
 RUN \
-	apt-get install -y -q update && \
-	apt install -y -q \
+	apt install update && \
+	apt install \
 		build-essential\
 		ninja-build\
 		valgrind\
