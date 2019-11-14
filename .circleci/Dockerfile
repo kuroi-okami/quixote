@@ -6,6 +6,7 @@ RUN \
 	apt update && \
 	apt install -y -q \
 		build-essential\
+		cmake\
 		ninja-build\
 		valgrind\
 		cppcheck\
