@@ -8,5 +8,7 @@ RUN \
 		build-essential\
 		ninja-build\
 		valgrind\
-		cppcheck
+		cppcheck\
+		git\
+		openssh-server
 
