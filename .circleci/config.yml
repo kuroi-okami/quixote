@@ -10,8 +10,7 @@
        - run:
            name: "Clone submodules"
            command: |
-                git -C ~/src/quixote submodule init
-                git -C ~/src/quixote submodule update --remote
+                git -C ~/src/quixote submodule update --init --recursive
        - run:
            name: "Building QXT"
            command: |
