@@ -12,11 +12,3 @@ target_link_libraries(log_sink
                       boost_filesystem
                       settings
                       )
-
-add_executable(beep_boop
-               main.cpp)
-
-target_link_libraries(beep_boop
-                      log_sink
-                      /src/quixote/third_party/boost-1.70/lib/libboost_filesystem.so.1.70.0
-                      )
