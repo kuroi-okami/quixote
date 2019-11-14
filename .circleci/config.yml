@@ -1,9 +1,9 @@
  version: 2
  jobs:
-   working_directory: ~/build/quixote
    build:
      docker:
        - image: willparr/quixote:latest
+     working_directory: ~/build/quixote
      steps:
        - checkout:
            path: ~/src/quixote
