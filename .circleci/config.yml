@@ -1,19 +1,18 @@
  version: 2
  jobs:
-   working_directory: ~/src
+   working_directory: ~/build/quixote
    build:
      docker:
        - image: willparr/quixote:latest
      steps:
-       - checkout
+       - checkout:
+           path: ~/src/quixote
        - run:
            name: "Clone submodules"
            command: |
-                git submodule init
-                git submodule update --remote
+                git -C ~/src/quixote submodule init
+                git -C ~/src/quixote submodule update --remote
        - run:
-           working_directory: ~/build/quixote
            name: "Building QXT"
            command: |
-                cd ~/build/quixote
                 cmake -G Ninja ~/src/quixote
