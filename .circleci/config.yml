@@ -2,7 +2,7 @@
  jobs:
    build:
      docker:
-       - image: circleci/ruby:2.4.1
+       - image: willparr/quixote:latest
      working_directory: ~/src
      steps:
        - checkout
