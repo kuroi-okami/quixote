@@ -15,4 +15,4 @@
        - run:
            name: "Building QXT"
            command: |
-                cmake -G Ninja ~/src/quixote
+                cmake -G Ninja ~/src/quixote && ninja
