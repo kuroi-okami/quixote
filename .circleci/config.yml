@@ -18,7 +18,7 @@
        - run:
            name: "Executing tests"
            command: |
-                export GTEST_OUTPUT:xml:/tmp/test-results/
+                export GTEST_OUTPUT=xml:/tmp/test-results/
                 mkdir -p /tmp/test-results
                 ctest -T memcheck
        - store_test_results:
