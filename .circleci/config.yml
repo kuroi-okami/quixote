@@ -14,4 +14,13 @@
        - run:
            name: "Building QXT"
            command: |
-                cmake -G Ninja ~/src/quixote && ninja
+                cmake -G Ninja ~/src/quixote && ninja    
+       - run:
+           name: "Executing tests"
+           command: |
+                export GTEST_OUTPUT:xml:/tmp/test-results/
+                mkdir -p /tmp/test-results
+                ctest -T memcheck
+       - store_test_results:
+           path: /tmp/test-results    
+   
