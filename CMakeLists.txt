@@ -3,14 +3,14 @@ cmake_minimum_required(VERSION 3.6.2)
 set(CMAKE_CXX_FLAGS "-O3 -Wall -Werror -DBOOST_ALL_DYN_LINK -DBOOST_LOG_DYN_LINK")
 set(CMAKE_CXX_STANDARD 11)
 
+project(quixote)
+
 # Configure ctest with custom memcheck options
 include(CTest)
 set( MEMORYCHECK_COMMAND_OPTIONS
      "--leak-check=full  --show-reachable=yes  --undef-value-errors=yes \
       --track-origins=no  --child-silent-after-fork=yes  --trace-children=no"
      CACHE STRING "Valgrind memcheck flags, to be used by ctest")
-
-project(quixote)
 
 # Configure third party dependancies
 add_subdirectory(third_party)
