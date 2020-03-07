@@ -11,6 +11,6 @@ RUN \
 		valgrind\
 		cppcheck\
 		git\
-		openssh-server
+		openssh-server\
 		sudo
 
