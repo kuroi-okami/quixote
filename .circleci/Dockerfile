@@ -12,4 +12,5 @@ RUN \
 		cppcheck\
 		git\
 		openssh-server
+		sudo
 
